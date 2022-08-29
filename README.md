@@ -32,8 +32,19 @@ The full plots for the training and testing for all 50 epochs:
 
 <!-- ![image](https://user-images.githubusercontent.com/45424924/187153890-d596b6ce-9aa4-4623-bb8d-f0c13b1c01d1.png)![image](https://user-images.githubusercontent.com/45424924/187153930-f74b5401-f593-45de-b65a-58647ae99f77.png)![image](https://user-images.githubusercontent.com/45424924/187153977-398ee546-cbf1-4041-8a28-937a1cb18e42.png)![image](https://user-images.githubusercontent.com/45424924/187154022-e95b30e4-1483-453e-96da-d9445aac9deb.png) -->
 
-From the presented results, I thought that RMSProp and Adam were too poor when used with AlexNet (since RMSProp's loss was all over the place, and though Adam was stable, it wasn't converging). So, I tried decreasing their learning rates to 1e-5 and retrained them, and I got these results:
+<p align="justify"> From the presented results, I thought that RMSProp and Adam were too poor when used with AlexNet (since RMSProp's loss was all over the place, and though Adam was stable, it wasn't converging). So, I tried decreasing their learning rates to 1e-5 and retrained them, and I got these much better results: </p>
 
 <img src="https://github.com/Ti-Oluwanimi/Impact-of-Optimizers/blob/main/plots/ALEXNET%20-%20RMSPROP%20(1e-3)%20and%20RMSPROP%20(1e-5).png" width="500">  <img src="https://github.com/Ti-Oluwanimi/Impact-of-Optimizers/blob/main/plots/ALEXNET%20-%20RMSPROP%20(1e-3)%20and%20RMSPROP%20(1e-5)%20(1).png" width="500">  <img src="https://github.com/Ti-Oluwanimi/Impact-of-Optimizers/blob/main/plots/AlexNet%20-%20ADAM%20(1e-3)%20and%20ADAM%20(1e-5).png" width="500">  <img src="https://github.com/Ti-Oluwanimi/Impact-of-Optimizers/blob/main/plots/AlexNet%20-%20ADAM%20(1e-3)%20and%20ADAM%20(1e-5)%20(1).png" width="500">
 
+# Conclusion
+I also carried out more experiments (changed lr for SGD to 1e-1 on LeNet and got a much better result), but these experiments are not enough for standard conclusions. However, my observations from the few conducted experiments are listed below:
 
+SGD: Not Recommended! While it is sure to converge, it normally takes its time to learn. What the SGDM or Adam could learn in 50 epochs, the SGD will learn it in about 500 epochs. However, there is a good chance that you can get some decent results when you start with a big learning rate (i.e., 1e-1). You can also use if you have enough time to wait for convergence, else, stay away.
+
+SGDM: Recommended! This optimizer has given the best results in the experiments. However, it might not work well if the starting learning rate is low. Otherwise, it is converges fast, and also helps the model’s generalizability. Totally recommended!
+
+Adagrad: Recommended! From the experiments, it could be said that this optimizer is the worst to use especially when you are using a small model like LeNet on complex datasets. However, in deeper networks, it could give good results, but optimal performance isn’t guaranteed.
+
+RMSProp: Recommended! This optimizer has also given very good performance. When used with a lower learning rate, it could give better performances. Asides the performance, it’s converging speed is high, and we can see the reason why it is being used sometimes in production sectors (industry).
+
+Adam: Recommended! According to some experts, Adam learns all patterns including the noise in the train set, and therefore it is fast to converge. However, in the experiments above, we can see that it doesn’t converge as well as the SGDM, but it converges and learns fast. Also, I could bet that its performance on bigger datasets (which would of course contain more noise) will be better than the other optimizers discussed above.

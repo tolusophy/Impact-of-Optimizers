@@ -13,3 +13,9 @@ A practical outlook on the most popular optimizers used in deep learning
 
 # Results
 <p align="justify"> For the basic experiments, I used LeNet and AlexNet on the CIFAR-10 dataset. I tried to compare the basic performances of the SGD, SGDM, Adagrad, RMSProp and Adam optimizers. Training the two networks using these optimizers for 50 epochs while using a learning rate of 1e-3 (and a momentum of 0.9 for the SGDM), I got the following results</p>
+
+Loss:
+|  Models |  SGD  |  SGDM | Adagrad | RMSProp |  Adam |
+|:-------:|:-----:|:-----:|:-------:|:-------:|:-----:|
+|  LeNet  | 1.259 | 0.635 |  1.449  |   0.63  | 0.605 |
+| AlexNet | 0.926 | 0.016 |  0.005  |  1.174  | 0.116 |

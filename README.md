@@ -11,4 +11,5 @@ A practical outlook on the most popular optimizers used in deep learning
 
 <p align="justify"> Furthermore, I noticed that a lot of researchers use the SGD-M (Stochastic Gradient Descent with Momentum) optimizer, but in the industry, Adam is favoured more. In this article, I will give brief high level descriptions on the most popular optimizers being used in the AI world. Actually, I had to do a number of experiments to see the difference between these optimizers and answer some questions I have about the use of these optimizers, as well as give clues on which optimizer is the best and when/how to use them based on my observations. </p>
 
-#Results
+# Results
+<p align="justify"> For the basic experiments, I used LeNet and AlexNet on the CIFAR-10 dataset. I tried to compare the basic performances of the SGD, SGDM, Adagrad, RMSProp and Adam optimizers. Training the two networks using these optimizers for 50 epochs while using a learning rate of 1e-3 (and a momentum of 0.9 for the SGDM), I got the following results</p>

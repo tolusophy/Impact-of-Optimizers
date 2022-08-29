@@ -25,3 +25,10 @@ Accuracy:
 |:-------:|:-----:|:-----:|:-------:|:-------:|:-----:|
 |  LeNet  | 54.03 | 69.49 |  48.08  |  65.18  | 67.61 |
 | AlexNet | 61.76 | 83.75 |  82.79  |   76.3  | 76.11 |
+
+The full plots for the training and testing for all 50 epochs:
+![image](https://user-images.githubusercontent.com/45424924/187153890-d596b6ce-9aa4-4623-bb8d-f0c13b1c01d1.png)![image](https://user-images.githubusercontent.com/45424924/187153930-f74b5401-f593-45de-b65a-58647ae99f77.png)![image](https://user-images.githubusercontent.com/45424924/187153977-398ee546-cbf1-4041-8a28-937a1cb18e42.png)![image](https://user-images.githubusercontent.com/45424924/187154022-e95b30e4-1483-453e-96da-d9445aac9deb.png)
+
+
+
+
